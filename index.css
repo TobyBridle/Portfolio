@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Mermaid";
+    src: url("./assets/fonts/Mermaid/Mermaid.ttf");
+}
+
+@font-face {
+    font-family: "Kanit";
+    src: url("./assets/fonts/Kanit/Kanit-SemiBold.ttf");
+    font-weight: 600;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: max(12.5px, 2%);
+}
+
+.socials li i {
+    /* font-size: max(1.45rem, 18px); */
+    font-size: clamp(25px, 0.71vw + 1em, 10vw);
+    color: #9f9f9f;
+    transition: color 150ms ease-in;
+}
+
+.socials li i:hover {
+    color: #1f1f1f;
+    transition: color 450ms ease;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #fefefe;
+
+    font-family: "Kanit", sans-serif;
+    text-align: center;
+}
+
+.maintenance-headsup {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.maintenance-headsup h1 {
+    font-size: 2rem;
+}
+
+.maintenance-headsup span {
+    font-family: "Mermaid", serif;
+    color: #5d5d5d;
+    font-weight: 400;
+}
+
+@media only screen and (min-width: 2160px){
+    :root {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    :root {
+        font-size: 12px;
+    }
+}
