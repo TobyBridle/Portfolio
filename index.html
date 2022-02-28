@@ -17,32 +17,39 @@
         <ul class="socials">
             <li class="socials__github">
                 <a href="https://github.com/TobyBridle" target="_blank">
-                    <i class="fa-brands fa-github" data-cursor-hover></i>
+                    <i class="fa-brands fa-github" aria-label="Link to my Github" data-cursor-hover></i>
                 </a>
             </li>
-            <li class="socials__linkedin" >
+            <li class="socials__linkedin">
                 <a href="https://www.linkedin.com/in/toby-bridle-b25676231/" target="_blank">
-                    <i class="fa-brands fa-linkedin" data-cursor-hover></i>
+                    <i class="fa-brands fa-linkedin" aria-label="Link to my Linkedin" data-cursor-hover></i>
                 </a>
             </li>
         </ul>
     </section>
         
     <script>
-    function isMobile()
-    {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-        
+
     const cursorScript = document.createElement("script");
     cursorScript.src = "js/cursor.js";
         
-                
-    if(isMobile) document.getElementsByTagName("head")[0].appendChild(cursorScript);
-        
+    function isMobile()
+    {
+        return (/Mobi|Android/i.test(navigator.userAgent) && window.screenWidth < 760); 
+    }
+    
+    if(!isMobile()) document.getElementsByTagName("head")[0].appendChild(cursorScript);
     window.onload = () => {
-        const cursor = new Cursor(document.querySelector("#cursor"), document.querySelectorAll("[data-cursor-hover]"));
-        console.log(cursor)
+        try {
+            const cursor = new Cursor(document.querySelector("#cursor"), document.querySelectorAll("[data-cursor-hover]"));
+        } catch (e)
+        {
+            console.group("|| YOU CAN PROBABLY IGNORE THIS ||")                                   
+            console.warn(e)
+            console.info("This error has most likely occured due to the page suspecting you're on a mobile device and so not placing the cursor script.")
+            console.info("If you do not think that is the cause, please contact me on bridle.toby@gmail.com");
+            console.groupEnd();
+        }
     };
     </script>
 </body>
