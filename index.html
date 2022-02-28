@@ -7,23 +7,33 @@
     <title>Toby Bridle | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./index.css" />
+    <script type="text/javascript" src="js/cursor.js"></script>
 </head>
 <body>
+    <!-- Cursor -->
+    <div id="cursor"></div>
     <section class="maintenance-headsup">
-    <h1>As of 25th Feb 2022, this page is not yet under development.</h1> 
+    <h1>As of <u class="underline" data-cursor-hover data-cursor-scale=4>25th Feb 2022</u>, this page is not yet under development.</h1> 
     <span>Whilst you're here, you can check out some of my projects:</span>
         <ul class="socials">
             <li class="socials__github">
                 <a href="https://github.com/TobyBridle" target="_blank">
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github" data-cursor-hover></i>
                 </a>
             </li>
-            <li class="socials__linkedin">
+            <li class="socials__linkedin" >
                 <a href="https://www.linkedin.com/in/toby-bridle-b25676231/" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-linkedin" data-cursor-hover></i>
                 </a>
             </li>
         </ul>
     </section>
+        
+    <script>
+    window.onload = () => {
+        const cursor = new Cursor(document.querySelector("#cursor"), document.querySelectorAll("[data-cursor-hover]"));
+        console.log(cursor)
+    };
+    </script>
 </body>
 </html>
