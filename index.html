@@ -7,7 +7,6 @@
     <title>Toby Bridle | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./index.css" />
-    <script type="text/javascript" src="js/cursor.js"></script>
 </head>
 <body>
     <!-- Cursor -->
@@ -30,6 +29,17 @@
     </section>
         
     <script>
+    function isMobile()
+    {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+        
+    const cursorScript = document.createElement("script");
+    cursorScript.src = "js/cursor.js";
+        
+                
+    if(isMobile) document.getElementsByTagName("head")[0].appendChild(cursorScript);
+        
     window.onload = () => {
         const cursor = new Cursor(document.querySelector("#cursor"), document.querySelectorAll("[data-cursor-hover]"));
         console.log(cursor)

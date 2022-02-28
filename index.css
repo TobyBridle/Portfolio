@@ -93,6 +93,11 @@ body {
     :root {
         font-size: 45px;
     }
+
+    #cursor
+    {
+        --cursor-size: 28px;           
+    }
 }
 
 @media only screen and (max-width: 650px)
