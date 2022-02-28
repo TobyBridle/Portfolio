@@ -1,6 +1,6 @@
 class Cursor
 {
-  constructor(target, hovers=[], smoothing=0.12)
+  constructor(target, hovers=[], smoothing=0.15)
   {
     this.target = target;
     this.hovers = Object.values(hovers).map(hover => hover.className);
