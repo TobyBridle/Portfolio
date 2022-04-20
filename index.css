@@ -48,26 +48,6 @@ body {
     text-align: center;
 }
 
-#cursor {
-    --cursor-size: 10px;
-        
-    position: fixed;
-    top: calc(var(--cursor-size)/2 * -1);
-    left: calc(var(--cursor-size)/2 * -1);
-
-    background: red;
-    width: var(--cursor-size);
-    height: var(--cursor-size);
-    border-radius: 50%;
-
-    transform: translate(0px, 0px);
-    opacity: 0;
-        
-    transition: opacity 1000ms ease-out;
-    pointer-events: none;
-    mix-blend-mode: difference;
-}
-
 .maintenance-headsup {
     height: 100%;
     width: 100%;
@@ -90,14 +70,15 @@ body {
     font-weight: 400;
 }
 
+.cursor {
+    background: red;
+    outline: none;
+    mix-blend-mode: difference;
+}
+
 @media only screen and (min-width: 2160px){
     :root {
         font-size: 45px;
-    }
-
-    #cursor
-    {
-        --cursor-size: 28px;           
     }
 }
 

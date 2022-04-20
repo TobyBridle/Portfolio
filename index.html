@@ -5,34 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toby Bridle | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./assets/cursor_styles.css" data-cursor-only />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/gh/TobyBridle/LessSimpleCursor/cursor.js"></script>
 </head>
 <body>
-    <!-- Cursor -->
-    <div id="cursor"></div>
+    <custom-cursor cursor-hovers="cursor-hover" fixed-class="cursor" width="10" height="10" cursor-smoothing-scale="0.2" cursor-smoothing-position="0.175"></custom-cursor>
     <section class="maintenance-headsup">
-    <h1>As of <u class="underline" data-cursor-hover data-cursor-scale=4>25th Feb 2022</u>, this page is not yet under development.</h1> 
+    <h1>As of <u class="underline cursor-hover" data-cursor-scale="4">25th Feb 2022</u>, this page is not yet under development.</h1> 
     <span>Whilst you're here, you can check out some of my projects:</span>
         <ul class="socials">
             <li class="socials__github">
                 <a href="https://github.com/TobyBridle" target="_blank">
-                    <i class="fa-brands fa-github" aria-label="Link to my Github" data-cursor-hover></i>
+                    <i class="fa-brands fa-github cursor-hover" aria-label="Link to my Github" data-cursor-scale="12"></i>
                 </a>
             </li>
             <li class="socials__linkedin">
                 <a href="https://www.linkedin.com/in/toby-bridle-b25676231/" target="_blank">
-                    <i class="fa-brands fa-linkedin" aria-label="Link to my Linkedin" data-cursor-hover></i>
+                    <i class="fa-brands fa-linkedin cursor-hover" aria-label="Link to my Linkedin" data-cursor-scale="12"></i>
                 </a>
             </li>
         </ul>
     </section>
         
-    <script>
-
-    const cursorScript = document.createElement("script");
-    cursorScript.src = "js/cursor.js";
-        
+    <!-- <script>
+    
     function isMobile()
     {
         return (/Mobi|Android/i.test(navigator.userAgent) && window.screenWidth < 760); 
@@ -51,6 +49,6 @@
             console.groupEnd();
         }
     };
-    </script>
+    </script> -->
 </body>
 </html>
